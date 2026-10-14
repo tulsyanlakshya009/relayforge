@@ -1,5 +1,9 @@
 # RelayForge
 
+<p align="center">
+  <img src="assets/relayforge-logo-banner.png" alt="RelayForge logo" width="640">
+</p>
+
 **Small prompts. Durable progress. Development that resumes when your budget does.**
 
 RelayForge is a local workflow orchestrator for Codex, Claude Code, Grok Build,
