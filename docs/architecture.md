@@ -38,12 +38,12 @@ restarting after an abnormal shutdown if necessary.
 Numeric tuple ordering handles `1.10` correctly. Bugs preempt feature work globally;
 within repairs, lower priority values win. Otherwise work stays in the earliest incomplete
 requirement group. Imported changes have priority 50 and ordinary features 100. A test
-gate is created once every non-gate item in its group is done. Any later change or repair
+gate is created once every non-planning, non-gate item in its group is done. Any later change or repair
 invalidates that gate. Gates cannot run while unresolved bugs or amendments remain in
 that group. Ordinary failed repairs retry the same item rather than recursively enqueueing
 new repairs. Retry budgets cap unproductive loops.
 
-Independent test commands run after each successful agent report, including subparts,
+Independent test commands run after each accepted non-planning completion report, including subparts,
 repairs and top-level gates. Empty test configuration is allowed while drafting but prevents
 a top-level gate from passing. A failing command adds a deduplicated bug except when
 already repairing a bug. The agent's test-gate prompt asks it to extend and execute missing

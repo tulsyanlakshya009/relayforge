@@ -40,7 +40,7 @@ installed executable, not a relative source checkout.
 
 Create a user service with an absolute `ExecStart=/path/to/relayforge --project /path/to/app tick`
 and an explicit agent PATH. Trigger it with a user timer using `OnCalendar=*-*-* *:*:00`.
-A single tick can run for up to the configured agent/test timeout. Use a timer rather than
+The agent and each check receive separate timeouts, so one tick can exceed a single timeout. Use a timer rather than
 `Restart=always` so idle or blocked work does not busy-loop. Use trusted local execution;
 public CI runners should not hold subscription credentials.
 
