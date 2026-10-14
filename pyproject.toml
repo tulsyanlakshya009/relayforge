@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "relayforge"
+version = "0.1.0"
+description = "Durable, budget-aware development workflows for coding agents"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Lakshya Tulsyan"}]
+dependencies = []
+
+[project.scripts]
+relayforge = "relayforge.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["relayforge*"]
